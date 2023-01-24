@@ -1,0 +1,35 @@
+<nav class="navbar navbar bg-success   justify-content-center ">
+  <a class="navbar-brand ">List section</a>
+  <form class="form-inline">
+    {{!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> --}}
+    {{!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> --}}
+  </form>
+</nav>
+<div class="contaniner row mt-5 ml-5 ">
+
+      <header>
+        <div class="container mt-5 ">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th list="col">No</th>
+                        <th list="col">model</th>
+                        <th list="col">version</th>
+                        <th list="col">Discription</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each laptop}}
+                    <tr>
+                        <td>{{this.number}}</td>
+                        <td>{{this.model}}</td>
+                        <td>{{this.version}} </td>
+                        <td>{{this.description}}</td>
+                    </tr>
+                    {{/each}}
+
+                </tbody>
+            </table>
+
+        </div>
+    </header>

@@ -1,0 +1,34 @@
+<nav class="navbar navbar-light bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand">Home page</a>
+    <div class="navbar-brand">
+      <a href="/card" class="navbar-brand">Card</a>
+      <a href="/list" class="navbar-brand">Table</a>
+      <a href="/table" class="navbar-brand">List</a>
+    </div>
+    <form class="d-flex">
+
+      {{! <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> }}
+      <a href="/logout" class="btn bg-dark text-white" type="submit">Sign Out</a>
+    </form>
+  </div>
+</nav>
+
+{{!-- card  --}}
+<div class="d-flex">
+{{#each products}}
+  <div class="card mt-5 ml-5 " style="width: 300px;">
+
+    <img style="height: 200px;width: 298px;"
+      src="{{this.image}}"
+      class="card-img-top"
+      alt="..."
+    />
+    <div class="card-body">
+      <h5 class="card-title">{{this.name}}</h5>
+      <p class="card-text">{{this.description}}</p>
+      <a href="#" class="btn btn-primary">Book Now</a>
+    </div>
+  </div>
+{{/each}}
+</div>
